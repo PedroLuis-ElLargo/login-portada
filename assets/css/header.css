@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo img {
+  height: 75px;
+  object-fit: contain;
+}
+
+.whatsapp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  position: absolute;
+  top: 20px; /* Distancia desde la parte superior */
+  right: 40px; /* Distancia desde la derecha */
+}
+
+.whatsapp a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #25d366; /* Color del texto del enlace de WhatsApp */
+  text-decoration: none;
+}
+
+.whatsapp a:hover {
+  background: #f3f3f3;
+}
+
+.whatsapp svg {
+  width: 20px;
+  height: 20px;
+  fill: #25d366;
+}
+
+.log-out {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  gap: 5px;
+}
+.log-out button {
+  border: none;
+  color: black;
+  padding: 4px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: white;
+  border: 2px solid #f44336;
+}
+.log-out button:hover {
+  background: #da190b;
+  color: white;
+}
+
+.log-out svg {
+  width: 20px;
+  height: 20px;
+  fill: #000000;
+}
