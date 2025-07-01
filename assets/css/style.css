@@ -18,7 +18,7 @@ body {
 /* --- CONTENEDOR PRINCIPAL (main.container) --- */
 .container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center; /* Centra verticalmente el aside y el article */
   gap: 30px; /* Espacio entre el aside y el article */
@@ -31,18 +31,6 @@ body {
   min-height: auto;
   flex-grow: 1; /* Permite que el contenedor principal ocupe el espacio restante */
 }
-
-/* Eliminamos los estilos de h1 y p del .container directamente,
-   ya que los h1 ahora están dentro de form-box y los p no aplican aquí.
-   Si necesitas un h1 o p genérico en .container fuera de form-box, crea una nueva clase para ellos. */
-/* .container h1 {
-    font-size: 30px;
-    margin: -10px 0;
-}
-.container p {
-    font-size: 14.5px;
-    margin: 15px 0;
-} */
 
 /* Estilo general para todos los formularios */
 form {
@@ -257,4 +245,22 @@ article {
 
 .form-box > div a:hover {
   text-decoration: underline;
+}
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD DEL MAIN LOGIN --- */
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+    max-width: 90%; /* CAMBIO: Usa porcentaje para un ancho más flexible */
+    padding: 15px;
+  }
+
+  .socials,
+  article {
+    flex: 0 0 auto;
+    width: 100%; /* Ocupa el 100% del contenedor padre */
+    padding: 15px; /* Ajuste de padding */
+  }
 }

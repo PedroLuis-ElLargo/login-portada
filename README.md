@@ -1,9 +1,10 @@
-# login-portada: [Login/Signup y Tablero de Asignaturas - Aula Virtual UTEL]
+# login-portada: Login/Signup y Tablero de Asignaturas - Aula Virtual UTEL
 
 ## 📂 Estructura del Proyecto
 
 El proyecto se estructura en las siguientes carpetas:
 
+```
 .
 ├── assets/
 │ ├── css/
@@ -28,3 +29,4 @@ El proyecto se estructura en las siguientes carpetas:
 │ ├── dashboard.html
 │ └── index.html
 └── README.md
+```
