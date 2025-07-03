@@ -41,15 +41,21 @@
     <main class="container">
       <article>
         <section class="form-box login estudiante">
-          <form action="#">
+          <form action="#" id="estudianteLoginForm">
             <h1>Bienvenido al Aula Virtual</h1>
             <div class="input-box">
-              <input type="text" placeholder="Matrícula" required />
+              <input
+                type="text"
+                name="matricula"
+                placeholder="Matrícula"
+                required
+              />
               <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
               <input
                 type="password"
+                name="contrasena"
                 class="input-contrasena"
                 placeholder="Contraseña"
                 required
@@ -67,6 +73,7 @@
               </div>
             </div>
             <button type="submit" class="btn">INGRESAR</button>
+            <p id="estudianteLoginMessage"></p>
           </form>
           <div class="change-panel">
             <hr />
@@ -75,15 +82,21 @@
         </section>
 
         <section class="form-box administracion">
-          <form action="#">
+          <form action="#" id="adminLoginForm">
             <h1>Acceso Administrativo</h1>
             <div class="input-box">
-              <input type="text" placeholder="Usuario Administrador" required />
+              <input
+                type="text"
+                name="usuarioAdmin"
+                placeholder="Usuario Administrador"
+                required
+              />
               <i class="bx bxs-user"></i>
             </div>
             <div class="input-box">
               <input
                 type="password"
+                name="contrasenaAdmin"
                 class="input-contrasena"
                 placeholder="Contraseña Administrador"
                 required
@@ -101,6 +114,7 @@
               </div>
             </div>
             <button type="submit" class="btn">ACCEDER</button>
+            <p id="adminLoginMessage"></p>
           </form>
           <div class="change-panel">
             <hr />

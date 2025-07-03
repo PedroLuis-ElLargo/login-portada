@@ -4,7 +4,7 @@
 
 El proyecto se estructura en las siguientes carpetas:
 
-```
+```bash
 .
 ├── assets/
 │ ├── css/
@@ -29,4 +29,18 @@ El proyecto se estructura en las siguientes carpetas:
 │ ├── dashboard.html
 │ └── index.html
 └── README.md
+```
+
+```bash
+src/
+├── controllers/
+│   └── animaciones.js          # Efectos visuales y UI
+├── services/
+│   └── login.js                # Funciones de autenticación (fetch)
+├── views/
+│   └── formHandlers.js         # Manejadores de formularios
+├── utils/
+│   └── domHelpers.js           # Funciones utilitarias del DOM
+├── index.js                    # Punto de entrada principal
+
 ```

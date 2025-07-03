@@ -1,35 +1,30 @@
+// index.js
 import { iniciarAnimaciones } from "./controllers/animaciones.js";
-import { autenticarEstudiante } from "./services/login.js";
-
-iniciarAnimaciones();
+import {
+  manejarLoginEstudiante,
+  manejarLoginAdmin,
+} from "./views/formHandlers.js";
+import {
+  togglePasswordVisibility,
+  configurarCambioPaneles,
+} from "./utils/domHelpers.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const formEstudiante = document.querySelector(".form-box.estudiante form");
+  const estudianteForm = document.getElementById("estudianteLoginForm");
+  const adminForm = document.getElementById("adminLoginForm");
 
-  formEstudiante?.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const inputMatricula = formEstudiante.querySelector('input[type="text"]');
-    const inputContrasena = formEstudiante.querySelector(
-      'input[type="password"]'
+  if (estudianteForm) {
+    manejarLoginEstudiante(
+      estudianteForm,
+      document.getElementById("estudianteLoginMessage")
     );
+  }
 
-    const matricula = inputMatricula.value.trim();
-    const contrasena = inputContrasena.value;
+  if (adminForm) {
+    manejarLoginAdmin(adminForm, document.getElementById("adminLoginMessage"));
+  }
 
-    if (!matricula || !contrasena) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
-
-    // Autenticación
-    if (autenticarEstudiante(matricula, contrasena)) {
-      window.location.href = "views/dashboard.html";
-    } else {
-      alert("Credenciales incorrectas. Inténtalo de nuevo.");
-      inputMatricula.value = "";
-      inputContrasena.value = "";
-      inputMatricula.focus();
-    }
-  });
+  togglePasswordVisibility();
+  configurarCambioPaneles();
+  iniciarAnimaciones();
 });
